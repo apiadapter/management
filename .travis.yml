@@ -1,8 +1,8 @@
 language: node_js
 sudo: false
-before_script: cd app
 before_install:
   - npm install -g grommet-cli
+  - cd app
 node_js:
   - "9.11.1"
 install:
