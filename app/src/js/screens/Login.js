@@ -9,7 +9,7 @@ import Section from 'grommet/components/Section';
 import Heading from 'grommet/components/Heading';
 import Paragraph from 'grommet/components/Paragraph';
 import Footer from 'grommet/components/Footer';
-import Logo from 'grommet/components/icons/Grommet';
+import Image from 'grommet/components/Image';
 
 import { login } from '../actions/session';
 import { navEnable } from '../actions/nav';
@@ -48,14 +48,14 @@ class Login extends Component {
           <Section
             full={true}
             colorIndex='brand'
-            texture='url(img/splash.png)'
+            className='loginBg'
             pad='large'
             justify='center'
             align='center'
           >
-            <Heading tag='h1' strong={true}>App</Heading>
+            <Heading tag='h1' strong={true}>API Adapter</Heading>
             <Paragraph align='center' size='large'>
-              Development with Grommet is cool.
+              Connect it.
             </Paragraph>
           </Section>
         </Article>
@@ -64,8 +64,7 @@ class Login extends Component {
           <span />
           <LoginForm
             align='start'
-            logo={<Logo className='logo' colorIndex='brand' />}
-            title='App'
+            logo={<Image src='/img/apiadapter.png' alt='API Adapter' size='small' />}
             onSubmit={this._onSubmit}
             errors={[error]}
             usernameType='text'
@@ -75,7 +74,7 @@ class Login extends Component {
             size='small'
             pad={{ horizontal: 'medium', vertical: 'small' }}
           >
-            <span className='secondary'>&copy; 2017 Grommet Labs</span>
+            <span className='secondary'>&copy; 2018 API Adapter</span>
           </Footer>
         </Sidebar>
 
