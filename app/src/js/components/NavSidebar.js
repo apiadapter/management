@@ -8,7 +8,7 @@ import Title from 'grommet/components/Title';
 import Menu from 'grommet/components/Menu';
 import Button from 'grommet/components/Button';
 import CloseIcon from 'grommet/components/icons/base/Close';
-import Logo from 'grommet/components/icons/Grommet';
+import Image from 'grommet/components/Image';
 import Anchor from 'grommet/components/Anchor';
 
 import SessionMenu from './SessionMenu';
@@ -32,11 +32,10 @@ class NavSidebar extends Component {
     ));
 
     return (
-      <Sidebar colorIndex='neutral-3' fixed={true}>
+      <Sidebar colorIndex='light-2' fixed={true}>
         <Header size='large' justify='between' pad={{ horizontal: 'medium' }}>
           <Title onClick={this._onClose} a11yTitle='Close Menu'>
-            <Logo />
-            <span>App</span>
+            <Image src='/img/apiadapter.png' alt='API Adapter' size='small' />
           </Title>
           <Button
             icon={<CloseIcon />}

@@ -6,8 +6,7 @@ import { connect } from 'react-redux';
 import Box from 'grommet/components/Box';
 import Button from 'grommet/components/Button';
 import Title from 'grommet/components/Title';
-import Logo from 'grommet/components/icons/Grommet';
-
+import Image from 'grommet/components/Image';
 import { navActivate } from '../actions/nav';
 
 class NavControl extends Component {
@@ -15,7 +14,7 @@ class NavControl extends Component {
     const { name, nav: { active } } = this.props;
 
     let result;
-    const title = <Title>{name || 'App'}</Title>;
+    const title = <Title>{name || 'API Adapter'}</Title>;
     if (!active) {
       result = (
         <Button onClick={() => this.props.dispatch(navActivate(true))}>
@@ -24,8 +23,7 @@ class NavControl extends Component {
             responsive={false}
             pad={{ between: 'small' }}
           >
-            <Logo />
-            {title}
+            <Image src='/img/apiadapter.png' alt='API Adapter' size='small' />
           </Box>
         </Button>
       );
