@@ -48,7 +48,7 @@ class Login extends Component {
           <Section
             full={true}
             colorIndex='brand'
-            className='loginBg'
+            className='login-background'
             pad='large'
             justify='center'
             align='center'
